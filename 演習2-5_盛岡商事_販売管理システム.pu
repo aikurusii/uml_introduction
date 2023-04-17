@@ -1,0 +1,10 @@
+@startuml 盛岡
+   actor 担当者 #AA0000;line:Pink;line.bold;
+rectangle 販売管理システム{
+    usecase 注文商品を確認
+    usecase 出荷状況を登録
+}
+
+担当者-->注文商品を確認
+担当者-->出荷状況を登録
+@enduml
