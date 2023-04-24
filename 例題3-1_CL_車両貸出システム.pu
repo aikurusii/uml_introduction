@@ -1,0 +1,32 @@
+@startuml
+skinparam classAttributeIconSize 0
+class 空車リスト {
+    + 操作1():void
+}
+class 車 {
+ - 管理番号:string
+ - 車種:string
+ - 移動方法:string
+}
+class 顧客 {
+    - 顧客id:String
+    - 氏名:String
+    - 電話番号:String
+    - 郵便番号:String
+    - 住所:String
+    ---
+    + setNmae(氏名:string) viod
+}
+class 予約 {
+    - 予約番号:int
+    - 管理番号:string
+    - 客番号:string
+    - 予約日:string
+    }
+class 貸出{
+    - 貸出番号:string
+    - 管理番号:string
+    - 顧客id:string
+    - 予約日:string
+}
+@enduml

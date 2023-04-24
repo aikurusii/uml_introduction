@@ -1,5 +1,28 @@
-@startuml test
-title シーケンス図
-お客様 -> 給仕係: 注文する
-給仕係 -> 料理人: 調理依頼
+@startuml
+
+actor User as user
+actor HotelEmployee as employee
+actor Administrator as admin
+
+rectangle "Hotel Reservation System" {
+
+  user --> (View Room Availability)
+  user --> (Make Reservation)
+  user --> (Login)
+
+  employee --> (Enter Room Availability)
+  employee --> (Login)
+
+  admin --> (View Reservation Statistics)
+  admin --> (Login)
+
+  (Make Reservation) --> (Login)
+  (Login) --> (Register as Member)
+
+  (Make Reservation) --> (Apply Promotion)
+
+  (Apply Promotion) --> (View Promotion)
+
+}
+
 @enduml
