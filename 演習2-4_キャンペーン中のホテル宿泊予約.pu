@@ -1,11 +1,12 @@
 @startuml 宿泊予約
-rectangle 宿泊予約{
-    usecase ログイン
-    usecase 予約
-    usecase (<u>キャンペーン期間内</u>) as input
+left to right direction
+actor 利用者 
+rectangle ホテル宿泊予約{
+    usecase ログインする
+    usecase キャンペーン
+    usecase (<u>予約する</u>\nキャンペーン期間中ならキャンペーン価格) as input
 }
-
-予約<.input :<<extend>>
-ログイン<.予約 :<<include>>
-利用者-->予約
+input.> ログインする:<<include>>
+ (キャンペーン)   .>input : <<extend>>
+利用者-->input
 @enduml
