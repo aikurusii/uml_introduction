@@ -1,20 +1,52 @@
-@startuml 注文
+@startuml 注文のオブジェクト図
 left to right direction
-object "参照顧客:重要顧客" as  a{
+object "利用者:重要顧客" as  importuser{
 }
-object "参照顧客:顧客" as b {
-氏名
+object "顧客情報:顧客" as u1 {
+氏名=高橋洋平
 }
-object "参照商品:商品" as c {
-商品名
-型式
+object "顧客情報:顧客" as u2 {
+氏名=高田利恵
 }
-object "注文情報:注文" as d {
-注文日
-数量
+object "顧客情報:顧客" as u3 {
+氏名=大坪直之
 }
-b -- a
-a -- c
-b -- c
-c -- d 
+object "商品" as p1 {
+商品名=テレビ
+型式=V12345
+}
+object "商品" as p2 {
+商品名=冷蔵庫
+型式=R8765
+}
+object "商品" as p3 {
+商品名=プロジェクタ
+型式=P1122
+}
+object "注文情報:注文" as o1 {
+注文日=11月21日
+数量=2
+}
+object "注文情報:注文" as o2 {
+注文日=11月21日
+数量=1
+}
+object "注文情報:注文" as o3 {
+注文日=12月23日
+数量=1
+}
+object "注文情報:注文" as o4 {
+注文日=12月30日
+数量=0
+}
+importuser -- u1
+u1 -- p1
+u1 -- p2
+u2 -- p2
+u3 -- p3
+p1 -- o1
+p2 -- o2
+p2 -- o3
+p3 -- o4
+
 @enduml
