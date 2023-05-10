@@ -1,0 +1,20 @@
+@startuml 注文
+left to right direction
+object "参照顧客:重要顧客" as  a{
+}
+object "参照顧客:顧客" as b {
+氏名
+}
+object "参照商品:商品" as c {
+商品名
+型式
+}
+object "注文情報:注文" as d {
+注文日
+数量
+}
+b -- a
+a -- c
+b -- c
+c -- d 
+@enduml

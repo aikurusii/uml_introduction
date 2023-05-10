@@ -1,0 +1,11 @@
+@startuml kuruma
+left to right direction
+object "資格取得申請:資格" as  a{
+名称
+日付
+}
+object "社員情報:社員" as b {
+氏名
+}
+a -- b
+@enduml

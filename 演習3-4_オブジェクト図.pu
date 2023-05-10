@@ -1,0 +1,20 @@
+@startuml オブジェクト
+left to right direction
+object "車情報1:車" as  a{
+ 車番号
+ 車種
+ 駆動方式
+}
+object "車情報2:タイヤ1" as b {
+}
+object "車情報2:タイヤ2" as c {
+}
+object "車情報2:タイヤ3" as d {
+}
+object "車情報2:タイヤ4" as e {
+}
+a -- b
+a -- c
+a -- d
+a -- e
+@enduml
