@@ -1,0 +1,8 @@
+@startuml a
+state f <<fork>>
+state j <<join>>
+state 電車で通勤中{
+    state 移動中
+    state 読書中
+}
+[*] --> f
