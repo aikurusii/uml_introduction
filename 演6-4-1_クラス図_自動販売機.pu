@@ -1,0 +1,7 @@
+@startuml 自動販売機
+class "自動販売機" as a{
+}
+class "ボタン" as b{
+}
+
+@enduml
