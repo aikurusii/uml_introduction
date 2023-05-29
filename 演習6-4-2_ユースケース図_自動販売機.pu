@@ -1,3 +1,15 @@
 @startuml ゆーす
-    
+    @startuml 自販機ユースケース図
+left to right direction
+actor 客 
+actor ベンダー 
+rectangle 自動販売機{
+    usecase ドリンクを補充
+    usecase お金回収
+    usecase ドリンクが出てくる
+}
+客-->ドリンクが出てくる:ボタンを押す
+お金回収-->ベンダー
+ベンダー-->ドリンクを補充
+@enduml
 @enduml
