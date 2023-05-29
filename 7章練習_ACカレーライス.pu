@@ -1,0 +1,20 @@
+@startuml --
+title カレー
+start
+:鍋、炊飯器を洗う;
+fork
+:野菜と肉を切る;
+note right
+肉も野菜も適当に
+end note
+:炒める;
+:鍋に材料と水を入れる;
+:茹でる;
+:カレールーを入れる;
+fork again
+:米をとぐ;
+:米を炊く;
+end fork
+:終わり;
+stop
+@enduml
