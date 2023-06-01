@@ -1,0 +1,16 @@
+@startuml ゆーす
+actor ユーザー
+actor 左右モータ
+actor 光センサー
+
+rectangle ライントレーサー {
+usecase ラインの境界線上を進む as li
+usecase 電源を付ける as a
+usecase 電源を消す as b
+}
+ユーザー---> a
+ユーザー---> b
+左右モータ ---> li
+光センサー -up->li
+li.> a
+@endumld
